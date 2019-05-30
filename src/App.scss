@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+.tab-content{
+  padding: 30px;
+}
+
+#name{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+#subheading{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+}
+
+#headshot{
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.about{
+  &_heading{
+    text-transform: uppercase;
+    padding-left: 40px;
+    letter-spacing: 2px; 
+    font-size: 17px;
+    font-weight: 600;
+  }
+  &_text_bio{
+    text-align: left;
+    padding-left: 40px;
+  }
+  &_text, &_heading{
+    text-align: left;
+    &#recent{
+      padding-left: 40px;
+    }
+  }
+  &_list{
+    list-style: none;
+  }
+}
+
+.gallery{
+  &_grid_img{
+    height: 50px;
+  }
+  &_grid_container{
+    padding: 0 !important;
+  }
+}

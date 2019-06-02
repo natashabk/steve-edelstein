@@ -8,38 +8,26 @@ export default class About extends Component {
       <div className="about">
       <Row>
         <Col>
-      <h3 className="about_heading">About Steve</h3>
+      <h3 className="about_heading_top">About Steve</h3>
         <p className="about_text_bio">
-          I’m a (mostly) retired lawyer from Atlanta who, until my wife and I
-          moved to Hilton Head Island, South Carolina in 2018, considered myself
-          a street photographer. Shortly after we moved to the Island, however,
-          my wife “commissioned” me to take some photos of the Herons, Egrets,
-          Ibis, Storks, and other shore birds and wildlife that make this Island
-          – indeed all of Beaufort County – an ideal place for nature lovers. I
-          got hooked immediately. Since then, street photography has taken a
-          back place to beach, lagoon and salt marsh photography.
+          Steve Edelstein is a (mostly) retired lawyer from Atlanta. Until he and his wife
+          moved to Hilton Head Island, South Carolina in 2018, he considered himself
+          a street photographer. Shortly after they moved to the Island, however,
+          Steve's wife “commissioned” him to take some photos of the herons, egrets,
+          ibis, storks, and other shore birds and wildlife that make the Island
+          (indeed, all of Beaufort County) an ideal place for nature lovers. He
+          was hooked immediately. Since then, street photography has taken a
+          backseat to beach, lagoon and salt marsh photography.
         </p>
         </Col>
         <Col xs={3}>
-        <img id="headshot" src={headshot} />
+        <img id="headshot" src={headshot} alt="headshot"/>
         </Col>
       </Row>
-        <h3 className="about_heading">Recent Awards</h3>
-        <p className="about_text" id="recent">
-          First Place - Society of Bluffton Artists 25th Annual Judged Show
-          (2019)
-        </p>
-        <h3 className="about_heading">Individual Shows</h3>
-        <p className="about_text">
-          <ul className="about_list">
-            <li>Hall-Hays Gallery (Atlanta Photography Group)</li>
-            <li>Spruill Center for the Arts (Library Gallery)</li>
-            <li>Atlanta Celebrates Photography (Radial Café)</li>
-            <li>Backdrop Gallery.</li>
-          </ul>
-        </p>
+        <Row className="about_row">
+        <Col className="about_col">
         <h3 className="about_heading">Group Shows and Awards</h3>
-        <p className="about_text">
+        
           <ul className="about_list">
             <li>Browns Guide to Georgia Magazine (1st Place)</li>
             <li>The Atlanta Journal Constitution (2nd Place)</li>
@@ -66,7 +54,24 @@ export default class About extends Component {
               Generation Juried Exhibit (Kennesaw State University)
             </li>
           </ul>
+        </Col>
+          <Col>
+        <h3 className="about_heading">Recent Awards</h3>
+        <p className="about_text" id="recent">
+          First Place - Society of Bluffton Artists 25th Annual Judged Show
+          (2019)
         </p>
+        <h3 className="about_heading">Individual Shows</h3>
+        
+          <ul className="about_list">
+            <li>Hall-Hays Gallery (Atlanta Photography Group)</li>
+            <li>Spruill Center for the Arts (Library Gallery)</li>
+            <li>Atlanta Celebrates Photography (Radial Café)</li>
+            <li>Backdrop Gallery.</li>
+          </ul>
+    
+        </Col>
+        </Row>
       </div>
     );
   }

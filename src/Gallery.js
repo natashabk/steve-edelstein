@@ -1,64 +1,59 @@
 import React, { Component } from "react";
-import { Carousel, CarouselItem, Row, Col, Table } from "react-bootstrap";
-import one from "./Images/one.jpg";
-import two from "./Images/two.jpg";
-import three from "./Images/three.jpg";
-import four from "./Images/four.jpg";
-import five from "./Images/five.jpg";
-import six from "./Images/six.jpg";
-import seven from "./Images/seven.jpg";
-import eight from "./Images/eight.jpg";
-import nine from "./Images/nine.jpg";
-import ten from "./Images/ten.jpg";
-
-const images= [one, two, three, four, five, six, seven, eight, nine, ten]
+import { Carousel, CarouselItem, Row, Col } from "react-bootstrap";
+import imgLinks from "./ImgLinks";
 
 export default class Gallery extends Component {
-  getCarouselItems(){
-   return images.map(img=> 
+  state = {
+    active: 0
+  };
+
+  handleClick = e => {
+    const selection = typeof e !== "number" ? e.target.id : e
+    this.setState({
+      active: selection
+    });
+  };
+
+  getCarouselItems() {
+    return imgLinks.map(img => (
       <CarouselItem>
-        <img src={img}></img>
-        </CarouselItem>
-    )
+        <img className="gallery_carousel" src={img} alt="carousel" />
+      </CarouselItem>
+    ));
   }
-  
+
+  getGalleryItems(start, end) {
+    return imgLinks
+      .slice(start, end)
+      .map(img => (
+        <img
+          key={img}
+          className="gallery_img"
+          src={img}
+          alt="gallery"
+          id={imgLinks.indexOf(img)}
+          onClick={this.handleClick}
+        />
+      ));
+  }
+
   render() {
     return (
-      <div className="Gallery">
-      <Row>
-        <Col className="gallery_grid">
-        <Table>
-          <tr>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={one}></img></td>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={two}></img></td>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={three}></img></td>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={four}></img></td>
-          </tr>
-          <tr>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={five}></img></td>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={six}></img></td>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={seven}></img></td>
-            <td className="gallery_grid_container"><img className="gallery_grid_img" src={eight}></img></td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-          </tr>
-          <tr>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-            <td>19</td>
-          </tr>
-        </Table>
-        </Col>
-        <Col>
-        <Carousel id="gallery_feature" slide={false}>
-          {this.getCarouselItems()}
-        </Carousel>
-        </Col>
+      <div className="gallery">
+        <Row className="gallery_row">
+          <Col className="gallery_col">{this.getGalleryItems(0, 7)}</Col>
+          <Col className="gallery_col">{this.getGalleryItems(7, 14)}</Col>
+          <Col className="gallery_col">{this.getGalleryItems(13, 21)}</Col>
+          <Col className="gallery_carousel">
+            <Carousel
+              slide={false}
+              activeIndex={this.state.active}
+              onSelect={this.handleClick}
+              interval={null}
+            >
+              {this.getCarouselItems()}
+            </Carousel>
+          </Col>
         </Row>
       </div>
     );

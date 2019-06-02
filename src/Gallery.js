@@ -40,11 +40,14 @@ export default class Gallery extends Component {
   render() {
     return (
       <div className="gallery">
-        <Row className="gallery_row">
-          <Col className="gallery_col">{this.getGalleryItems(0, 7)}</Col>
-          <Col className="gallery_col">{this.getGalleryItems(7, 14)}</Col>
-          <Col className="gallery_col">{this.getGalleryItems(13, 21)}</Col>
-          <Col className="gallery_carousel">
+        <Row className="gallery_row" noGutters={true}>
+          <Col>
+          <Col xs={12} className="gallery_col">{this.getGalleryItems(0, 8)}</Col>
+          <Col xs={12} className="gallery_col">{this.getGalleryItems(7, 15)}</Col>
+          <Col xs={12}  className="gallery_col">{this.getGalleryItems(12, 21)}</Col>
+          </Col>
+          <Col>
+          <Col xs={12} md={6} className="gallery_carousel">
             <Carousel
               slide={false}
               activeIndex={this.state.active}
@@ -53,6 +56,7 @@ export default class Gallery extends Component {
             >
               {this.getCarouselItems()}
             </Carousel>
+          </Col>
           </Col>
         </Row>
       </div>

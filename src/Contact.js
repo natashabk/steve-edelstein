@@ -20,9 +20,14 @@ export default class Contact extends Component {
           }
           {!loading && !success &&
             <div>
+             <label>Your name</label>
               <input type='text' name='name' required />
+              <br/>
+              <label>Email</label>
               <input type='email' name="email" required />
-              <textarea name='Message' required />
+              <br/>
+              <textarea name='message' placeholder="Enter your message" required />
+              <br/>
               <button>Submit</button>
             </div>
           }

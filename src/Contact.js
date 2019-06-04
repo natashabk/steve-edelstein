@@ -21,6 +21,7 @@ export default class Contact extends Component {
           {!loading && !success &&
             <div>
              <label>Your name</label>
+             <input type="text" name="subject"  value="New Inquiry from Edelstein Photography!" hidden/>
               <input type='text' name='name' required />
               <br/>
               <label>Email</label>

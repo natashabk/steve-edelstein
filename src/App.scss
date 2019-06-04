@@ -98,3 +98,37 @@
     width: 75px;
   }
 }
+
+// CONTACT FORM
+
+form{
+  text-align: left;
+}
+
+label, input, textarea{
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: rgba(255,255,255,0.8);
+  border: transparent;
+  &:focus{
+    background-color: #fff;
+  }
+}
+
+textarea{
+  resize: none;
+  border-color: #cccccc;
+}
+
+button{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: black;
+  font-weight: 600;
+  border-radius: 5%;
+}
+
+#formWrapper {
+  background-image: url("https://images.unsplash.com/photo-1546890248-e60a833a09a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  height: 500px; 
+}

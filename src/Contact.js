@@ -2,11 +2,15 @@ import React, { Component } from "react";
 // import { Tabs, Tab } from "react-bootstrap";
 
 export default class Contact extends Component {
+  handleSubmit = e => {
+    e.preventDefault();
+  }
+  
   render() {
     return (
       <div className="Home">
         <h3 className="about_heading_top">Getting in Touch</h3>
-        <form name="contact" netlify>
+        <form name="contact" netlify onSubmit={this.handleSubmit}>
   <p>
     <label>Your Name<input type="text" name="name" /></label>
   </p>

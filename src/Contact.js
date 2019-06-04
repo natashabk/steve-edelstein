@@ -20,7 +20,8 @@ export default class Contact extends Component {
           }
           {!loading && !success &&
             <div>
-              <input type='text' name='Name' required />
+              <input type='text' name='name' required />
+              <input type='email' name="email" required />
               <textarea name='Message' required />
               <button>Submit</button>
             </div>

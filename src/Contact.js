@@ -19,7 +19,7 @@ export default class Contact extends Component {
                     <p> Your information was not sent. Please try again later.</p>
                     </div>
                   )}
-                  {success && <div><p>Thank you for contacting us!</p></div>}
+                  {success && <div><p>Your message has been sent. Thanks for reaching out!</p></div>}
                   {!loading && !success && (
                     <div>
                       <input

@@ -8,7 +8,8 @@ export default class About extends Component {
       <div className="about">
       <Row>
         <Col>
-      <h3 className="about_heading_top">About Steve</h3>
+
+      <h3 className="about_heading_top"><img id="inline_headshot" src={headshot} alt="headshot"/>About Steve</h3>
         <p className="about_text_bio">
           Steve Edelstein is a (mostly) retired lawyer from Atlanta. Until he and his wife
           moved to Hilton Head Island, South Carolina in 2018, he considered himself
@@ -25,7 +26,7 @@ export default class About extends Component {
         </Col>
       </Row>
         <Row className="about_row">
-        <Col className="about_col">
+        <Col xs={12} md={6}className="about_col">
         <h3 className="about_heading">Group Shows and Awards</h3>
         
           <ul className="about_list">
@@ -55,7 +56,7 @@ export default class About extends Component {
             </li>
           </ul>
         </Col>
-          <Col>
+          <Col xs={12} md={6} className="about_col">
         <h3 className="about_heading">Recent Awards</h3>
         <p className="about_text" id="recent">
           First Place - Society of Bluffton Artists 25th Annual Judged Show

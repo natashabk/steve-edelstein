@@ -8,7 +8,7 @@ export default class Gallery extends Component {
   };
 
   handleClick = e => {
-    const selection = typeof e !== "number" ? e.target.id : e
+    const selection = typeof e !== "number" ? e.target.id : e;
     this.setState({
       active: selection
     });
@@ -42,12 +42,18 @@ export default class Gallery extends Component {
       <div className="gallery">
         <Row className="gallery_row" noGutters={true}>
           <Col>
-          <Col xs={12} className="gallery_col">{this.getGalleryItems(0, 8)}</Col>
-          <Col xs={12} className="gallery_col">{this.getGalleryItems(7, 15)}</Col>
-          <Col xs={12}  className="gallery_col">{this.getGalleryItems(12, 21)}</Col>
+            <Col xs={12} className="gallery_col">
+              {this.getGalleryItems(0, 8)}
+            </Col>
+            <Col xs={12} className="gallery_col">
+              {this.getGalleryItems(7, 15)}
+            </Col>
+            <Col xs={12} className="gallery_col">
+              {this.getGalleryItems(12, 21)}
+            </Col>
           </Col>
-          <Col>
-          <Col className="gallery_carousel">
+
+          <Col sm={12} className="gallery_carousel">
             <Carousel
               slide={false}
               activeIndex={this.state.active}
@@ -56,7 +62,6 @@ export default class Gallery extends Component {
             >
               {this.getCarouselItems()}
             </Carousel>
-          </Col>
           </Col>
         </Row>
       </div>

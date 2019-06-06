@@ -27,6 +27,14 @@
   margin-top: 5px;
 }
 
+#inline_headshot {
+  height: 75px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+
 .about {
   &_heading {
     text-transform: uppercase;
@@ -86,13 +94,9 @@
     width: 100px;
     height: 100px;
   }
-  // &_carousel {
-  //   width: 700px;
-  //   height: 700px;
-  //   min-width: 700px;
-  //   min-height: 700px;
-  //   margin-top: 5px;
-  // }
+  &_carousel{
+    margin-top: 5px;
+  }
 }
 
 // CONTACT FORM

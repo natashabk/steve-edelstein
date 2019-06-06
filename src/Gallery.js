@@ -4,7 +4,7 @@ import imgLinks from "./ImgLinks";
 
 export default class Gallery extends Component {
   state = {
-    active: 0
+    active: this.props.tab === "one" ? 0 : 24
   };
 
   handleClick = e => {
@@ -16,8 +16,8 @@ export default class Gallery extends Component {
 
   getCarouselItems() {
     return imgLinks.map(img => (
-      <CarouselItem>
-        <img className="gallery_carousel" src={img} alt="carousel" />
+      <CarouselItem key={img}>
+        <img className="gallery_carousel" src={img} alt="carousel"/>
       </CarouselItem>
     ));
   }
@@ -27,7 +27,7 @@ export default class Gallery extends Component {
       .slice(start, end)
       .map(img => (
         <img
-          key={img}
+          key={img.slice(73, 96)}
           className="gallery_img"
           src={img}
           alt="gallery"
@@ -38,7 +38,7 @@ export default class Gallery extends Component {
   }
 
   render() {
-    const ranges = this.props.tab == "one" ? [0,8,16,24] : [24,32,40,48];
+    const ranges = this.props.tab === "one" ? [0,8,16,24] : [24,32,40,48];
     return (
       <div className="gallery">
         <Row className="gallery_row" noGutters={true}>

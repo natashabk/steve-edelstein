@@ -16,10 +16,10 @@ export default class Contact extends Component {
                   {loading && <div>Loading...</div>}
                   {error && (
                     <div>
-                      Your information was not sent. Please try again later.
+                    <p> Your information was not sent. Please try again later.</p>
                     </div>
                   )}
-                  {success && <div>Thank you for contacting us!</div>}
+                  {success && <div><p>Thank you for contacting us!</p></div>}
                   {!loading && !success && (
                     <div>
                       <input
@@ -31,7 +31,7 @@ export default class Contact extends Component {
                       <input
                         type="text"
                         name="subject"
-                        readOnly="New Inquiry from Edelstein Photography!"
+                        defaultValue="New Inquiry from Edelstein Photography!"
                         hidden
                       />
                       <input

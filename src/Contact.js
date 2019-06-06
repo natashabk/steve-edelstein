@@ -6,10 +6,10 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="Home">
-        <h3 className="about_heading_top">Getting in Touch</h3>
+        <h3 className="about_heading_top" id="contact">Getting in Touch</h3>
         <div id="formWrapper">
           <Row>
-            <Col>
+            <Col xs={12} md={6}>
             <NetlifyForm name="contact">
               {({ loading, error, success }) => (
                 <div>
@@ -31,7 +31,7 @@ export default class Contact extends Component {
                       <input
                         type="text"
                         name="subject"
-                        value="New Inquiry from Edelstein Photography!"
+                        readOnly="New Inquiry from Edelstein Photography!"
                         hidden
                       />
                       <input

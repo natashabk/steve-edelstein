@@ -47,7 +47,7 @@ export default class Gallery extends Component {
           <Col xs={12}  className="gallery_col">{this.getGalleryItems(12, 21)}</Col>
           </Col>
           <Col>
-          <Col xs={12} md={6} className="gallery_carousel">
+          <Col className="gallery_carousel">
             <Carousel
               slide={false}
               activeIndex={this.state.active}

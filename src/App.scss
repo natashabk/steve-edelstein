@@ -70,12 +70,18 @@
 }
 
 .gallery{
+  display: flex;
+  flex-direction: column;
   &_row{
     flex-direction: row;
     display: inline-flex;
+    overflow: hidden;
   }
   &_col{
     flex-direction: row;
+    &.col-12{
+      padding: 0;
+    }
   }
   &_img{
     margin-top: 8px;
@@ -92,30 +98,49 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .gallery_img {
     height: 75px;
     width: 75px;
   }
 }
 
+@media screen and (max-width: 750px) {
+  .gallery_carousel {
+    min-width: 100%;
+  }
+  .tab-content{
+    padding: 15px;
+  }
+}
+
+
 // CONTACT FORM
 
 form{
-  text-align: left;
+  text-align: right;
+}
+
+::placeholder{
+  color: black;
 }
 
 label, input, textarea{
   width: 100%;
-  margin-bottom: 5px;
-  background-color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.7);
   border: transparent;
   &:focus{
     background-color: #fff;
   }
 }
 
+input, textarea{
+  padding: 5px;
+}
+
 textarea{
+  margin-bottom: 5px;
   resize: none;
   border-color: #cccccc;
 }
@@ -126,12 +151,13 @@ button{
   color: black;
   font-weight: 600;
   border-radius: 5%;
+  padding: 5px 10px;
 }
 
 #formWrapper {
   background-image: url("https://images.unsplash.com/photo-1546890248-e60a833a09a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px; 
+  padding: 10px;
 }

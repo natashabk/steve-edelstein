@@ -17,7 +17,7 @@ export default class Gallery extends Component {
   getCarouselItems() {
     return imgLinks.map(img => (
       <CarouselItem key={img}>
-        <img className="gallery_carousel" src={img} alt="carousel"/>
+        <img className="gallery_carousel" src={img} alt={`${img.slice(72,96)}-full`}/>
       </CarouselItem>
     ));
   }
@@ -27,10 +27,10 @@ export default class Gallery extends Component {
       .slice(start, end)
       .map(img => (
         <img
-          key={img.slice(73, 96)}
+          key={img.slice(72, 96)}
           className="gallery_img"
           src={img}
-          alt="gallery"
+          alt={`${img.slice(72,96)}-thumb`}
           id={imgLinks.indexOf(img)}
           onClick={this.handleClick}
         />

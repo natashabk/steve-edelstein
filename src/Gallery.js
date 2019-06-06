@@ -38,18 +38,19 @@ export default class Gallery extends Component {
   }
 
   render() {
+    const ranges = this.props.tab == "one" ? [0,8,16,24] : [24,32,40,48];
     return (
       <div className="gallery">
         <Row className="gallery_row" noGutters={true}>
-          <Col>
-            <Col xs={12} className="gallery_col">
-              {this.getGalleryItems(0, 8)}
+          <Col className="gallery_wrap_col">
+            <Col xs={12}className="gallery_col">
+              {this.getGalleryItems(ranges[0], ranges[1])}
             </Col>
-            <Col xs={12} className="gallery_col">
-              {this.getGalleryItems(7, 15)}
+            <Col xs={12}className="gallery_col">
+              {this.getGalleryItems(ranges[1], ranges[2])}
             </Col>
-            <Col xs={12} className="gallery_col">
-              {this.getGalleryItems(12, 21)}
+            <Col xs={12}className="gallery_col">
+              {this.getGalleryItems(ranges[2], ranges[3])}
             </Col>
           </Col>
 

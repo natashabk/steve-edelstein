@@ -1,29 +1,39 @@
 @media screen and (max-width: 379px) {
-  .nav a{
+  .nav a {
     padding: 8px;
   }
-  #root{
+  #root {
     border: 10px solid #d4cfcf;
   }
-  .gallery_row{
+  .gallery_row {
     flex-direction: column-reverse;
   }
   .gallery_carousel {
     width: 340px;
     height: 340px;
+    margin-bottom: 10px;
   }
-  .tab-content{
+  .tab-content {
     padding: 10px 0px 0px 0px;
   }
-  .col-3{
+  .col-3 {
     display: none;
   }
-  .about_list{
+  .about_list {
     padding-right: 17px;
     font-size: 14px;
   }
-  .about_text_bio{
+  .about_text_bio {
     font-size: 14px;
+    margin-top: 10px;
+  }
+  .about_heading_top {
+    display: inline;
+    vertical-align: bottom;
+    position: relative;
+  }
+  .about_bio_col {
+    text-align: left;
   }
 }
 
@@ -37,18 +47,16 @@
   .tab-content {
     padding: 15px;
   }
-  #inline_headshot{
+  #inline_headshot {
     display: none;
   }
 }
-
-@media screen and (max-width: 950px) {
-  .gallery_img {
-    height: 75px;
-    width: 75px;
+@media screen and (min-width: 560px) {
+  .gallery_wrap_col {
+    // max-width: 500px;
+    width: 100%;
   }
 }
-
 
 @media screen and (min-width: 800px) {
   .gallery_carousel {
@@ -60,8 +68,18 @@
     min-height: 700px;
     margin-top: 5px;
   }
+  .gallery_wrap_col {
+    max-width: 799px;
+    width: 100%;
+  }
   .tab-content {
     padding: 30px;
   }
 }
 
+@media screen and (max-width: 950px) {
+  .gallery_img {
+    height: 65px;
+    width: 65px;
+  }
+}

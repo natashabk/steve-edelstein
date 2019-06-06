@@ -7,7 +7,7 @@ export default class About extends Component {
     return (
       <div className="about">
       <Row>
-        <Col>
+        <Col className="about_bio_col">
 
       <h3 className="about_heading_top"><img id="inline_headshot" src={headshot} alt="headshot"/>About Steve</h3>
         <p className="about_text_bio">

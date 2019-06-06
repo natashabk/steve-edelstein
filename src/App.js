@@ -11,9 +11,12 @@ function App() {
     <div className="App">
       <h1 id="name">Steve Edelstein</h1>
       <h4 id="subheading">color photography</h4>
-      <Tabs defaultActiveKey="gallery" id="uncontrolled-tab-example">
-        <Tab eventKey="gallery" title="Gallery">
-          <Gallery/>
+      <Tabs defaultActiveKey="gallery1" id="uncontrolled-tab-example">
+        <Tab eventKey="gallery1" title="Gallery(1)">
+          <Gallery tab="one"/>
+        </Tab>
+        <Tab eventKey="gallery2" title="Gallery(2)">
+          <Gallery tab="two"/>
         </Tab>
         <Tab eventKey="about" title="About">
           <About/>

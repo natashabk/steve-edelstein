@@ -8,7 +8,7 @@ export default class Gallery extends Component {
   };
 
   handleClick = e => {
-    const selection = typeof e !== "number" ? e.target.id : e;
+    const selection = typeof e !== "number" ? Number(e.target.id) : e;
     this.setState({
       active: selection
     });
@@ -38,6 +38,7 @@ export default class Gallery extends Component {
   }
 
   render() {
+    console.log(this.state)
     const ranges = this.props.tab === "one" ? [0,8,16,24] : [24,32,40,48];
     return (
       <div className="gallery">

@@ -1,9 +1,5 @@
 const url =
   "https://res.cloudinary.com/das8diykm/image/upload/v1560138700/Edelstein/";
-  // "https://res.cloudinary.com/das8diykm/image/upload/v1559842107/Edelstein/Great_Egret_7.jpg"
-  // "https://res.cloudinary.com/das8diykm/image/upload/v1560138700/Edelstein/Great_Egret_7.jpg"
-
-
   const ids = [
   "Snowy_Egret_1",
   "Great_Egret_9",

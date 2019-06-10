@@ -4,7 +4,7 @@ import imgLinks from "./ImgLinks";
 
 export default class Gallery extends Component {
   state = {
-    active: this.props.tab === "one" ? 0 : 24
+    active: this.props.tab === "birds1" ? 0 : 24
   };
 
   handleClick = e => {
@@ -15,43 +15,48 @@ export default class Gallery extends Component {
   };
 
   getCarouselItems() {
-    return imgLinks.map(img => (
+    return imgLinks[this.props.tab].map(img => (
       <CarouselItem key={img}>
-        <img className="gallery_carousel" src={img} alt={`${img.slice(60,96)}-full`}/>
-        <Carousel.Caption><h2>#{imgLinks.indexOf(img)+1}</h2></Carousel.Caption>
+        <img
+          className="gallery_carousel"
+          src={img}
+          alt={`${img}-full`}
+        />
+        <Carousel.Caption>
+          <h2>#{this.props.id + imgLinks[this.props.tab].indexOf(img) + 1}</h2>
+        </Carousel.Caption>
       </CarouselItem>
     ));
   }
 
   getGalleryItems(start, end) {
-    return imgLinks
+    return imgLinks[this.props.tab]
       .slice(start, end)
       .map(img => (
         <img
-          key={img.slice(60, 96)}
+          key={img}
           className="gallery_img"
           src={img}
-          alt={`${img.slice(60,96)}-thumb`}
-          id={imgLinks.indexOf(img)}
+          alt={`${img}-thumb`}
+          id={imgLinks[this.props.tab].indexOf(img)}
           onClick={this.handleClick}
         />
       ));
   }
 
   render() {
-    const ranges = this.props.tab === "one" ? [0,8,16,24] : [24,32,40,48];
     return (
       <div className="gallery">
         <Row className="gallery_row" noGutters={true}>
           <Col className="gallery_wrap_col">
-            <Col xs={12}className="gallery_col">
-              {this.getGalleryItems(ranges[0], ranges[1])}
+            <Col xs={12} className="gallery_col">
+              {this.getGalleryItems(0, 8)}
             </Col>
-            <Col xs={12}className="gallery_col">
-              {this.getGalleryItems(ranges[1], ranges[2])}
+            <Col xs={12} className="gallery_col">
+              {this.getGalleryItems(8, 16)}
             </Col>
-            <Col xs={12}className="gallery_col">
-              {this.getGalleryItems(ranges[2], ranges[3])}
+            <Col xs={12} className="gallery_col">
+              {this.getGalleryItems(16, 24)}
             </Col>
           </Col>
 

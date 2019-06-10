@@ -11,13 +11,19 @@ function App() {
     <div className="App">
       <h1 id="name">Steve Edelstein</h1>
       <h4 id="subheading">color photography</h4>
-      <Tabs defaultActiveKey="gallery1" id="uncontrolled-tab-example">
-        <Tab eventKey="gallery1" title="Gallery 1">
-          <Gallery tab="one"/>
+      <Tabs defaultActiveKey="birds1" id="uncontrolled-tab-example">
+        <Tab eventKey="birds1" title="Birds 1">
+          <Gallery tab="birds1" id={100}/>
         </Tab>
-        <Tab eventKey="gallery2" title="Gallery 2">
-          <Gallery tab="two"/>
+        <Tab eventKey="birds2" title="Birds 2">
+          <Gallery tab="birds2" id={200}/>
         </Tab>
+        {/* <Tab eventKey="street1" title="Street 1">
+          <Gallery tab="street1"/>
+        </Tab>
+        <Tab eventKey="street2" title="Street 2">
+          <Gallery tab="street2"/>
+        </Tab> */}
         <Tab eventKey="about" title="About">
           <About/>
         </Tab>

@@ -1,5 +1,5 @@
 const url =
-  "https://res.cloudinary.com/das8diykm/image/upload/v1560138700/Edelstein/";
+  "https://res.cloudinary.com/das8diykm/image/upload/Edelstein/";
   const ids = [
   "Snowy_Egret_1",
   "Great_Egret_9",

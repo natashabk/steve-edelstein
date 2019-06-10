@@ -17,7 +17,8 @@ export default class Gallery extends Component {
   getCarouselItems() {
     return imgLinks.map(img => (
       <CarouselItem key={img}>
-        <img className="gallery_carousel" src={img} alt={`${img.slice(72,96)}-full`}/>
+        <img className="gallery_carousel" src={img} alt={`${img.slice(60,96)}-full`}/>
+        <Carousel.Caption><h2>#{imgLinks.indexOf(img)+1}</h2></Carousel.Caption>
       </CarouselItem>
     ));
   }
@@ -27,10 +28,10 @@ export default class Gallery extends Component {
       .slice(start, end)
       .map(img => (
         <img
-          key={img.slice(72, 96)}
+          key={img.slice(60, 96)}
           className="gallery_img"
           src={img}
-          alt={`${img.slice(72,96)}-thumb`}
+          alt={`${img.slice(60,96)}-thumb`}
           id={imgLinks.indexOf(img)}
           onClick={this.handleClick}
         />
@@ -38,7 +39,6 @@ export default class Gallery extends Component {
   }
 
   render() {
-    console.log(this.state)
     const ranges = this.props.tab === "one" ? [0,8,16,24] : [24,32,40,48];
     return (
       <div className="gallery">

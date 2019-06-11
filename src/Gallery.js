@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { Carousel, CarouselItem, Row, Col } from "react-bootstrap";
-import imgLinks from "./ImgLinks";
+import imgLinks from "./Modules/ImgLinks";
+import captions from "./Modules/ImgCaptions";
 
 export default class Gallery extends Component {
   state = {
-    active: this.props.tab === "birds1" ? 0 : 24
+    active: 0,
+    captions: captions(),
+    brokenImgs: []
   };
 
   handleClick = e => {
@@ -14,34 +17,57 @@ export default class Gallery extends Component {
     });
   };
 
+  getCarouselCaptions(id, img) {
+    let idx = imgLinks[this.props.tab].indexOf(img) + 1;
+    if (
+      this.props.tab.includes("street") &&
+      this.state.captions[this.props.tab][idx - 1]
+    ) {
+      return (
+        <h2 id="textCaption">{this.state.captions[this.props.tab][idx - 1]}</h2>
+      );
+    } else {
+      return <h2>#{id + idx}</h2>;
+    }
+  }
+
   getCarouselItems() {
-    return imgLinks[this.props.tab].map(img => (
-      <CarouselItem key={img}>
-        <img
-          className="gallery_carousel"
-          src={img}
-          alt={`${img}-full`}
-        />
-        <Carousel.Caption>
-          <h2>#{this.props.id + imgLinks[this.props.tab].indexOf(img) + 1}</h2>
-        </Carousel.Caption>
-      </CarouselItem>
-    ));
+    return imgLinks[this.props.tab].map(img => {
+      if (!this.state.brokenImgs.includes(img)) {
+      return (
+        <CarouselItem key={img}>
+          <img className="gallery_carousel" src={img} alt={`${img}-lg`} />
+          <Carousel.Caption>
+            {this.getCarouselCaptions(this.props.id, img)}
+          </Carousel.Caption>
+        </CarouselItem>
+      );
+    }
+    })
   }
 
   getGalleryItems(start, end) {
-    return imgLinks[this.props.tab]
-      .slice(start, end)
-      .map(img => (
-        <img
-          key={img}
-          className="gallery_img"
-          src={img}
-          alt={`${img}-thumb`}
-          id={imgLinks[this.props.tab].indexOf(img)}
-          onClick={this.handleClick}
-        />
-      ));
+    return imgLinks[this.props.tab].slice(start, end).map(
+      img => {
+        if (!this.state.brokenImgs.includes(img)) {
+          return (
+            <img
+              key={img}
+              className="gallery_img"
+              src={img}
+              id={imgLinks[this.props.tab].indexOf(img)}
+              onClick={this.handleClick}
+              alt={`${img}-thumb`}
+              onError={() =>
+                this.setState({
+                  brokenImgs: this.state.brokenImgs.concat(img)
+                })
+              }
+            />
+          );
+        }
+      }
+    );
   }
 
   render() {

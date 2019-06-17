@@ -8,11 +8,15 @@ export default class GalleryContainer extends Component {
     return (
       <Tabs defaultActiveKey="birds1">
   <Tab eventKey="birds1" title="Birds.1">
-    <Gallery tab="birds1" id={100}/>
+    <Gallery tab="birds1" id={0}/>
   </Tab>
   <Tab eventKey="birds2" title="Birds.2">
-    <Gallery tab="birds2" id={200}/>
+    <Gallery tab="birds2" id={24}/>
   </Tab>
+  <Tab eventKey="birds3" title="Birds.3">
+    <Gallery tab="birds3" id={48}/>
+  </Tab>
+
   <Tab eventKey="street1" title="Street.1">
     <Gallery tab="street1"/>
   </Tab>

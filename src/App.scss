@@ -167,3 +167,12 @@ button {
   height: 500px;
   padding: 10px;
 }
+
+.carousel-caption{
+  width: 70%;
+  h2{
+    font-size: 1.5rem;
+    padding: 6px;
+    width: max-content;
+  }
+}

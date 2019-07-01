@@ -6,7 +6,7 @@ export default class GalleryContainer extends Component {
 
   render(){
     return (
-      <Tabs defaultActiveKey="birds1">
+      <Tabs defaultActiveKey="birds1" className="galleryTabs">
   <Tab eventKey="birds1" title="Birds.1">
     <Gallery tab="birds1" id={0}/>
   </Tab>

@@ -6,6 +6,21 @@
 .nav {
   text-transform: uppercase;
   letter-spacing: 3px;
+  justify-content: center;
+}
+
+nav.galleryTabs.nav.nav-tabs{
+  justify-content: left;
+  border-bottom: transparent;
+  a.active{
+   border: transparent;
+   text-decoration: underline;
+   text-decoration-color: #49505782;
+  }
+}
+
+.galleries{
+  margin-top: -20px;
 }
 
 #name {
@@ -100,6 +115,8 @@
   }
   &_carousel{
     margin-top: 5px;
+  }
+  &.gallery_carousel img{
   }
   &_wrap_col{
     max-width: 599px;

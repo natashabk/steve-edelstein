@@ -9,9 +9,7 @@ function fetchCaptions() {
     .then(resp => {
       resp.resources.forEach(image => {
         let id = (image.public_id.slice(8) - 1).toString();
-        let caption = image.context.custom.caption
-        ? image.context.custom.caption
-        : image.context.custom.alt;
+        let caption="No caption";   
         captions[tag][id]= caption
       });
     })

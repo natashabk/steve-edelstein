@@ -10,14 +10,17 @@
 }
 
 nav.galleryTabs.nav.nav-tabs{
-  justify-content: left;
+  margin-top: 3px;
+  // justify-content: left;
   border-bottom: transparent;
-  a.active{
-   border: transparent;
-   text-decoration: underline;
-   text-decoration-color: #49505782;
+  a.active, a:hover{
+    border: 0px solid transparent;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: #49505782;
   }
 }
+
 
 .galleries{
   margin-top: -20px;

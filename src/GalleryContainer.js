@@ -20,9 +20,6 @@ export default class GalleryContainer extends Component {
   <Tab eventKey="street1" title="Street.1">
     <Gallery tab="street1"/>
   </Tab>
-  <Tab eventKey="street2" title="Street.2">
-    <Gallery tab="street2"/>
-  </Tab>
 </Tabs>
     )
   }

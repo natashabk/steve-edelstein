@@ -17,19 +17,19 @@ export default class Gallery extends Component {
     });
   };
 
-  getCarouselCaptions(id, img) {
-    let idx = imgLinks[this.props.tab].indexOf(img) + 1;
-    if (
-      this.props.tab.includes("street") &&
-      this.state.captions[this.props.tab][idx - 1]
-    ) {
-      return (
-        <h2 id="textCaption">{this.state.captions[this.props.tab][idx - 1]}</h2>
-      );
-    } else {
-      return <h2>#{id + idx}</h2>;
-    }
-  }
+  // getCarouselCaptions(id, img) {
+  //   let idx = imgLinks[this.props.tab].indexOf(img) + 1;
+  //   if (
+  //     this.props.tab.includes("street") &&
+  //     this.state.captions[this.props.tab][idx - 1]
+  //   ) {
+  //     return (
+  //       <h2 id="textCaption">{this.state.captions[this.props.tab][idx - 1]}</h2>
+  //     );
+  //   } else {
+  //     return <h2>#{id + idx}</h2>;
+  //   }
+  // }
 
   getCarouselItems() {
     return imgLinks[this.props.tab].map(img => {
@@ -38,7 +38,7 @@ export default class Gallery extends Component {
         <CarouselItem key={img}>
           <img className="gallery_carousel" src={img} alt={`${img}-lg`} />
           <Carousel.Caption>
-            {this.getCarouselCaptions(this.props.id, img)}
+            {/* {this.getCarouselCaptions(this.props.id, img)} */}
           </Carousel.Caption>
         </CarouselItem>
       );

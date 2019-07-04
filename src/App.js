@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, Tab } from "react-bootstrap";
 import "./App.scss";
-import "./Mobile.scss";
+import "./Responsive.scss";
 import Contact from "./Contact";
 import About from "./About";
 import Gallery from "./GalleryContainer";

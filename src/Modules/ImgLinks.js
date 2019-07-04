@@ -11,7 +11,7 @@ const imgLinks = {
   birds1: ids.map(id => `${url}/upload/Birds1/1--${id}.jpg`),
   birds2: ids.map(id => `${url}/upload/Birds2/2--${id}.jpg`),
   birds3: ids.map(id => `${url}/upload/Birds3/3--${id}.jpg`),
-  street1: ids.map(id => `${url}/upload/Street%20Sampler/s-${id}.jpg`),
+  street: ids.map(id => `${url}/upload/Street%20Sampler/s-${id}.jpg`),
 };
 
 export default imgLinks;

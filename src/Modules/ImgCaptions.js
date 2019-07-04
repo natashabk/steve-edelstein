@@ -1,19 +1,20 @@
 let captions = {};
-const url = "https://res.cloudinary.com/badgerdad/image/list/";
+const url =
+  "https://res.cloudinary.com/badgerdad/image/list/streetsampler.json";
 
 function fetchCaptions() {
-  ["streetsampler"].forEach(tag=> {
-    captions[tag] = {}
-    fetch(`${url}${tag}.json`)
+  captions["streetsampler"] = {};
+  fetch(url)
     .then(resp => resp.json())
     .then(resp => {
       resp.resources.forEach(image => {
-        let id = (image.public_id.slice(17) - 1).toString();
-        let caption="No caption";   
-        captions[tag][id]= caption
+        let id = image.public_id.slice(15);
+        let caption = image.context.custom.caption
+          ? image.context.custom.caption
+          : "Untitled";
+        captions["streetsampler"][id] = caption;
       });
-    })
-  })
+    });
   return captions;
 }
 

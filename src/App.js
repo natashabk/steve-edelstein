@@ -2,7 +2,7 @@ import React from "react";
 import { Tabs, Tab } from "react-bootstrap";
 import "./App.scss";
 import "./Responsive.scss";
-import Contact from "./Contact";
+import Enquiries from "./Enquiries";
 import About from "./About";
 import Gallery from "./GalleryContainer";
 import Home from "./Home";
@@ -22,8 +22,8 @@ function App() {
         <Tab eventKey="about" title="About">
           <About/>
         </Tab>
-        <Tab eventKey="contact" title="Inquiries">
-          <Contact/>
+        <Tab eventKey="enquiries" title="Enquiries">
+          <Enquiries/>
         </Tab>
       </Tabs>
     </div>

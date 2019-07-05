@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NetlifyForm from "react-netlify-form";
 import { Row, Col } from "react-bootstrap";
 
-export default class Contact extends Component {
+export default class Enquiries extends Component {
   render() {
     return (
       <div className="Home">

@@ -21,20 +21,41 @@
     display: none;
   }
   .about_list {
-    padding-right: 17px;
+    padding-right: 25px;
     font-size: 14px;
+  }
+  .about_text{
+    padding-right: 25px;
   }
   .about_text_bio {
     font-size: 14px;
     margin-top: 10px;
+    padding-right: 20px;
   }
   .about_heading_top {
     display: inline;
     vertical-align: bottom;
     position: relative;
   }
+  .about_heading {
+
+  }
   .about_bio_col {
     text-align: left;
+  }
+  #formWrapper {
+    min-height:340px;
+  }
+  .Home{
+    min-width: 100%;
+  }
+  h3#contact.about_heading_top{
+    font-size: 12px;
+    vertical-align: initial;
+    letter-spacing: 1px;
+  }
+  .about_heading{
+    margin-left: -12px;
   }
 }
 
@@ -62,8 +83,8 @@
   .gallery_carousel {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
     min-width: 700px;
     min-height: 700px;
     margin-top: 5px;

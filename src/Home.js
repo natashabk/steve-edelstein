@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Carousel, CarouselItem, Row, Col } from "react-bootstrap";
+import { Carousel, CarouselItem} from "react-bootstrap";
 import imgLinks from "./Modules/ImgLinks";
 
 export default class Home extends Component {

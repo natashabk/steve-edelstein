@@ -28,7 +28,7 @@ export default class Gallery extends Component {
             </Carousel.Caption>
           </CarouselItem>
         );
-      }
+      } else return null;
     });
   }
 
@@ -50,7 +50,7 @@ export default class Gallery extends Component {
             }
           />
         );
-      }
+      } else return null;
     });
   }
 

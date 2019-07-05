@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Poiret One', cursive;
+  font-family: "Poiret One", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  p, li, label, input, textarea {
-    font-family: 'Lato', sans-serif;
+  p,
+  li,
+  label,
+  input,
+  textarea {
+    font-family: "Lato", sans-serif;
     color: #2d2d2d;
   }
   h2 {
@@ -17,10 +21,10 @@ body {
 }
 
 code {
-  font-family: 'Poiret One', cursive;
+  font-family: "Poiret One", cursive;
 }
 
-#root{
+#root {
   border: 25px solid #d4cfcf;
   min-height: 100vh;
 }
@@ -37,8 +41,8 @@ code {
 }
 
 nav.galleryTabs.nav.nav-tabs {
-padding-top: 15px;
-margin-bottom: -12px;
+  padding-top: 15px;
+  margin-bottom: -12px;
   border-bottom: transparent;
   a.active,
   a:hover {

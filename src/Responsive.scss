@@ -9,7 +9,8 @@
   .gallery_row {
     flex-direction: column-reverse;
   }
-  .gallery_carousel, .gallery_carousel_featured {
+  .gallery_carousel,
+  .gallery_carousel_featured {
     width: 340px;
     height: 340px;
     margin-bottom: 10px;
@@ -24,7 +25,7 @@
     padding-right: 25px;
     font-size: 14px;
   }
-  .about_text{
+  .about_text {
     padding-right: 25px;
   }
   .about_text_bio {
@@ -38,23 +39,22 @@
     position: relative;
   }
   .about_heading {
-
   }
   .about_bio_col {
     text-align: left;
   }
   #formWrapper {
-    min-height:340px;
+    min-height: 340px;
   }
-  .Home{
+  .Home {
     min-width: 100%;
   }
-  h3#contact.about_heading_top{
+  h3#contact.about_heading_top {
     font-size: 12px;
     vertical-align: initial;
     letter-spacing: 1px;
   }
-  .about_heading{
+  .about_heading {
     margin-left: -12px;
   }
 }
@@ -65,6 +65,9 @@
     height: 100%;
     max-width: 660px;
     max-height: 660px;
+  }
+  .gallery_carousel_featured {
+    height: 450px;
   }
   .tab-content {
     padding: 15px;

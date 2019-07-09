@@ -27,11 +27,13 @@ code {
 #root {
   border: 25px solid #d4cfcf;
   min-height: 100vh;
+  overflow: auto;
 }
 
 .App {
   text-align: center;
   padding: 15px;
+  max-height: -webkit-fill-available;
 }
 
 .nav {

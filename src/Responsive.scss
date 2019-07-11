@@ -66,12 +66,11 @@
 		max-height: 600px;
 	}
 	.gallery_carousel_featured {
-		height: 700px;
+		height: 550px;
 		max-height: 80%;
 	}
 	.tab-content {
 		padding: 15px;
-		overflow: scroll;
 	}
 	#inline_headshot {
 		display: none;
@@ -97,8 +96,8 @@
 	.gallery_carousel {
 		display: flex;
 		flex-direction: column;
-		width: 700px;
-		height: 700px;
+		width: 550px;
+		height: 550px;
 		min-width: 550px;
 		min-height: 500px;
 		margin-top: 5px;

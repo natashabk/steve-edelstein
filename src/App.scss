@@ -1,174 +1,170 @@
 // GALLERIES
 .galleries {
-  margin-top: -20px;
+	margin-top: -20px;
 }
 
 .gallery {
-  display: flex;
-  flex-direction: column;
-  &_row {
-    flex-direction: row;
-    display: inline-flex;
-    overflow: hidden;
-  }
-  &_col {
-    flex-direction: row;
-    &.col-12 {
-      padding: 0;
-    }
-  }
-  &_img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100px;
-    height: 100px;
-  }
-  &_carousel {
-    margin-top: 5px;
-  }
-  &_wrap_col {
-    max-width: 599px;
-    width: 100%;
-  }
-  // &_carousel_featured img {
-  //   max-height: 1000px;
-  //   max-width: 1000px;
-  // }
-  #textCaption {
-    font-size: 1rem;
-  }
+	display: flex;
+	flex-direction: column;
+	&_row {
+		flex-direction: row;
+		display: inline-flex;
+		overflow: hidden;
+		margin: auto;
+	}
+	&_col {
+		flex-direction: row;
+		&.col-12 {
+			padding: 0;
+		}
+	}
+	&_img {
+		margin-top: 8px;
+		vertical-align: middle;
+		width: 100px;
+		height: 100px;
+	}
+	&_carousel {
+		margin-top: 5px;
+	}
+	&_wrap_col {
+		max-width: 599px;
+		width: 100%;
+	}
+	#textCaption {
+		font-size: 1rem;
+	}
 }
 
-img.gallery_carousel_featured{
-  max-height:700px;
-  max-width: 700px; 
+img.gallery_carousel_featured {
+	max-height: 550px;
+	max-width: 550px;
 }
-
-
 
 // ABOUT
 #headshot {
-  height: 150px;
-  border-radius: 50%;
-  margin-top: 5px;
+	height: 150px;
+	border-radius: 50%;
+	margin-top: 5px;
 }
 
 #inline_headshot {
-  height: 75px;
-  border-radius: 50%;
-  margin-top: 5px;
-  margin-right: 15px;
+	height: 75px;
+	border-radius: 50%;
+	margin-top: 5px;
+	margin-right: 15px;
 }
 
 .about {
-  &_heading {
-    text-transform: uppercase;
-    padding-left: 40px;
-    letter-spacing: 2px;
-    font-size: 19px;
-    font-weight: 600;
-    &_top {
-      padding-left: 25px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 19px;
-      font-weight: 600;
-      text-align: left;
-      &#contact {
-        padding-left: 0px;
-        font-size: 15px;
-      }
-    }
-  }
-  &_text_bio {
-    text-align: left;
-    padding-left: 25px;
-  }
-  &_text,
-  &_heading {
-    text-align: left;
-    &#recent {
-      padding-left: 40px;
-    }
-  }
-  &_list {
-    list-style: none;
-    text-align: left;
-  }
-  &_row {
-    padding-top: 15px;
-  }
-  &_col {
-    padding: 0px;
-  }
+	max-width: 800px;
+	margin: auto;
+	&_heading {
+		text-transform: uppercase;
+		padding-left: 40px;
+		letter-spacing: 2px;
+		font-size: 19px;
+		font-weight: 600;
+		&_top {
+			padding-left: 25px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 19px;
+			font-weight: 600;
+			text-align: left;
+			&#contact {
+				padding-left: 0px;
+				font-size: 15px;
+			}
+		}
+	}
+	&_text_bio {
+		text-align: left;
+		padding-left: 25px;
+	}
+	&_text,
+	&_heading {
+		text-align: left;
+		&#recent {
+			padding-left: 40px;
+		}
+	}
+	&_list {
+		list-style: none;
+		text-align: left;
+	}
+	&_row {
+		padding-top: 15px;
+	}
+	&_col {
+		padding: 0px;
+	}
 }
 
 // ENQUIRIES
-.Home{
-  margin: auto;
-    width: fit-content;
-    min-width: 800px;
+.Home {
+	margin: auto;
+	width: fit-content;
+	min-width: 800px;
 }
 
-
 form {
-  text-align: left;
+	text-align: left;
 }
 
 ::placeholder {
-  color: black;
+	color: black;
 }
 
 label,
 input,
 textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: transparent;
-  &:focus {
-    background-color: #fff;
-  }
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border: transparent;
+	&:focus {
+		background-color: #fff;
+	}
 }
 
 input,
 textarea {
-  padding: 5px;
+	padding: 5px;
 }
 
 textarea {
-  margin-bottom: 5px;
-  resize: none;
-  border-color: #cccccc;
+	margin-bottom: 5px;
+	resize: none;
+	border-color: #cccccc;
 }
 
 button {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: black;
-  font-weight: 600;
-  border-radius: 5%;
-  padding: 5px 10px;
-  background-color: #ffff;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: black;
+	font-weight: 600;
+	border-radius: 5%;
+	padding: 5px 10px;
+	background-color: #ffff;
 }
 
 #formWrapper {
-  background-image: url("./Images/form-img.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  min-height: 500px;
-  height: 100%;
-  max-width: 1000px;
-  padding: 10px;
-  margin: auto;
+	background-image: url("./Images/form-img.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	min-height: 500px;
+	height: 100%;
+	max-width: 1000px;
+	padding: 10px;
+	margin: auto;
 }
 
 .carousel-caption {
-  width: 70%;
-  h2 {
-    font-size: 1.5rem;
-    padding: 6px;
-    width: max-content;
-  }
+	width: 70%;
+	h2 {
+		font-size: 1.5rem;
+		padding: 6px;
+		width: max-content;
+	}
 }

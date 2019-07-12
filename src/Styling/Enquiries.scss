@@ -1,0 +1,75 @@
+.Home {
+	margin: auto;
+	width: fit-content;
+	min-width: 800px;
+	@include for-phone-only {
+		min-width: 100%;
+	}
+}
+
+form {
+	text-align: left;
+}
+
+::placeholder {
+	color: black;
+}
+
+label,
+input,
+textarea {
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border: transparent;
+	&:focus {
+		background-color: #fff;
+	}
+}
+
+input,
+textarea {
+	padding: 5px;
+}
+
+textarea {
+	margin-bottom: 5px;
+	resize: none;
+	border-color: #cccccc;
+}
+
+button {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: black;
+	font-weight: 600;
+	border-radius: 5%;
+	padding: 5px 10px;
+	background-color: #ffff;
+}
+
+#formWrapper {
+	background-image: url("../Images/form-img.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	min-height: 500px;
+	max-width: 1000px;
+	padding: 10px;
+	margin: auto;
+	@include for-phone-only {
+		min-height: 340px;
+	}
+	@include for-tablet-landscape-up {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+h3#contact.about_heading_top {
+	@include for-phone-only {
+		font-size: 11px;
+		vertical-align: initial;
+		letter-spacing: 1px;
+	}
+}

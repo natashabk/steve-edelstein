@@ -1,0 +1,94 @@
+#headshot {
+	height: 150px;
+	border-radius: 50%;
+	margin-top: 5px;
+}
+
+#inline_headshot {
+	height: 75px;
+	border-radius: 50%;
+	margin-top: 5px;
+	margin-right: 15px;
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.about {
+	max-width: 800px;
+	margin: auto;
+	&_heading {
+		text-transform: uppercase;
+		padding-left: 40px;
+		letter-spacing: 2px;
+		font-size: 19px;
+		font-weight: 600;
+		&_top {
+			padding-left: 25px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 19px;
+			font-weight: 600;
+			text-align: left;
+			&#contact {
+				padding-left: 0px;
+				font-size: 15px;
+			}
+			@include for-phone-only {
+				display: inline;
+				vertical-align: bottom;
+				position: relative;
+			}
+		}
+	}
+	&_text_bio {
+		text-align: left;
+		padding-left: 25px;
+		@include for-phone-only {
+			font-size: 14px;
+			margin-top: 10px;
+			padding-right: 20px;
+		}
+	}
+	&_text {
+		text-align: left;
+		&#recent {
+			padding-left: 40px;
+		}
+		@include for-phone-only {
+			padding-right: 25px;
+		}
+	}
+	&_heading {
+		text-align: left;
+		&#recent {
+			padding-left: 40px;
+		}
+		@include for-phone-only {
+			margin-left: -12px;
+		}
+	}
+	&_list {
+		list-style: none;
+		text-align: left;
+		@include for-phone-only {
+			padding-right: 25px;
+			font-size: 14px;
+		}
+	}
+	&_row {
+		padding-top: 15px;
+	}
+	&_col {
+		padding: 0px;
+	}
+	&_bio_col {
+		@include for-phone-only {
+			text-align: left;
+		}
+	}
+	@include for-desktop-up {
+		max-width: 800px;
+		margin: auto;
+	}
+}

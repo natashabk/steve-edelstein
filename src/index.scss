@@ -2,68 +2,69 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300&display=swap");
 
 body {
-  margin: 0;
-  font-family: "Poiret One", cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  p,
-  li,
-  label,
-  input,
-  textarea {
-    font-family: "Lato", sans-serif;
-    color: #2d2d2d;
-  }
-  h2 {
-    font-weight: 900;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+	margin: 0;
+	font-family: "Poiret One", cursive;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	p,
+	li,
+	label,
+	input,
+	textarea {
+		font-family: "Lato", sans-serif;
+		color: #2d2d2d;
+	}
+	h2 {
+		font-weight: 900;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 }
 
 code {
-  font-family: "Poiret One", cursive;
+	font-family: "Poiret One", cursive;
 }
 
 #root {
-  border: 25px solid #d4cfcf;
-  min-height: 100vh;
-  overflow: auto;
+	border: 25px solid #d4cfcf;
+	min-height: 100vh;
+	overflow: auto;
 }
 
 .App {
-  text-align: center;
-  padding: 15px;
-  max-height: -webkit-fill-available;
+	text-align: center;
+	padding: 15px;
+	max-height: -webkit-fill-available;
+	min-height: -webkit-fill-available;
 }
 
 .nav {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  justify-content: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	justify-content: center;
 }
 
 nav.galleryTabs.nav.nav-tabs {
-  padding-top: 15px;
-  margin-bottom: -12px;
-  border-bottom: transparent;
-  a.active,
-  a:hover {
-    border: 0px solid transparent;
-    background-color: transparent;
-    text-decoration: underline;
-    text-decoration-color: #49505782;
-  }
+	padding-top: 15px;
+	margin-bottom: -12px;
+	border-bottom: transparent;
+	a.active,
+	a:hover {
+		border: 0px solid transparent;
+		background-color: transparent;
+		text-decoration: underline;
+		text-decoration-color: #49505782;
+	}
 }
 
 #name {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-top: 0.5em;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin-top: 0.5em;
 }
 
 #subheading {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-bottom: 1.5em;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	margin-bottom: 1.5em;
 }

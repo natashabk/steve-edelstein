@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node": "^12.0.0",
+    "browserslist": "^4.16.5",
+    "glob-parent": "^5.1.2",
     "node-fetch": "^2.6.1",
     "node-sass": "^6.0.1",
     "react": "^16.9.0",
@@ -15,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "yarn config set ignore-engines true && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
